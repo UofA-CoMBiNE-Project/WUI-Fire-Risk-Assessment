@@ -302,5 +302,72 @@ h3
 }
 
 
+@media only screen and (min-width: 2498px) and (min-height: 1369px)
+{
+    h1
+    {
+        font-size: 5.3rem;
+        margin-left: 14%;
+    }
+
+    h3
+    {
+        font-size: 4rem;
+        margin-left: 25%;
+    }
+
+    #logo
+    {
+        transform: scale(0.35);
+    }
+
+    #coe
+    {
+        transform: scale(0.32);
+    }
+
+    #eco
+    {
+        transform: scale(0.35);
+        top: 35%;
+    }
+
+    #ai4
+    {
+        transform: scale(0.27);
+        top: 30%;
+    }
+
+    .start-button
+    {
+        transform: scale(2);  
+        right: 46%;
+        bottom: 55  %;
+    }
+
+    #caption1
+    {
+        font-size: 2.5rem;  
+    }
+
+    #caption1-1
+    {
+        font-size: 2.5rem;
+        bottom: 29%;
+    }
+
+    #caption1-2
+    {
+        font-size: 2.5rem;
+        bottom: 25%;
+    }  
+    
+    #caption2
+    {
+        font-size: 2.5rem;
+    }
+}
+
+
 
 

@@ -203,6 +203,7 @@ body {
 
 #map-dropdown-label
 { 
+  font-size: 1rem;
   position: absolute;
   right: 85%;
   font-family: 'Trebuchet MS';
@@ -546,5 +547,88 @@ body {
   #popup h1
   {
     font-size: 3.5rem; 
+  }
+}
+
+@media only screen and (min-width: 2498px) and (min-height: 1369px)
+{
+  #map-dropdown-label
+  { 
+    font-size: 2rem;
+    right: 80%;
+  }
+
+  #map-dropdown
+  {
+    font-size: 1.5rem;
+    right: 43%;
+  }
+
+  #datepicker-label
+  { 
+    font-size: 2rem;
+    right: 32%;
+  } 
+
+  #datepicker
+  {
+    font-size: 1.8rem;
+    right: 10%;
+  } 
+
+  #help-button
+  {
+    right: 3%;
+    transform: scale(1.8);
+    top: 2%;
+  }
+
+  #update-button
+  {
+    transform: scale(2.1);
+    right: 83%;
+    top: 10%;
+  }
+
+  #download-button
+  {
+    transform: scale(2.1);
+    right: 50%;
+    top: 10%;
+  } 
+
+  #fmt
+  {
+    transform: scale(2.0);
+    right: 12%;
+    top: 10.2%;
+  }
+
+  #fmt-label
+  {
+    transform: scale(2);
+    left: 77%;
+    top: 6.5%;
+  }
+
+  #fb
+  {
+    transform: scale(2.0);
+    right: 12%;
+    top: 10.2%;
+  }
+
+  #fb-label
+  {
+    transform: scale(2);
+    left: 83%;
+    top: 7%;
+  }
+  
+  #map-image
+  {
+    transform: scale(0.54);
+    bottom: 19rem;
+    left: 42.5%;
   }
 }
