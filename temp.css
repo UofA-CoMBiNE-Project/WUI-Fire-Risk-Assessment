@@ -1,0 +1,160 @@
+.container
+{
+    display: flex;
+    align-items: center;
+    width:auto;
+    height: 100vh;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background-repeat: no-repeat;
+    min-height: 120vh;
+    background-image: url('background.jpg');
+    background-attachment: fixed;
+    backdrop-filter: blur(2px);
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
+
+h1 {
+    display: inline-block;
+    position: relative;
+    white-space: nowrap;
+    text-align: center;
+    width: 100vh;
+    height: 100vh;
+    font-size: 50px;
+    text-shadow: 2px 2px 5px #000000;
+    color: white;
+    -webkit-text-stroke: 1px #000000;
+    text-stroke: 1px #000000;
+}
+
+h3 {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 30px;
+    text-shadow: 2px 2px 5px #000000;
+    color: white;
+}
+
+#logo, #coe, #eco {
+    position: relative;
+    transform: scale(0.4);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+#logo {
+    position: relative;
+    bottom: 450px;
+    width: 1150px;
+    right: 650px;
+}
+
+#coe {
+    position: relative;
+    bottom: 450px;
+    width: 1000px;
+    left: 700px;
+}
+
+#eco {
+    position: relative;
+    bottom: 260px;
+    width: 1000px;
+    right: 275px;
+    transform: scale(0.35);
+}
+
+.logo {
+    position: relative;
+    transform: scale(1.1);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#caption1 {
+    text-align: center;
+    vertical-align: baseline;
+    text-shadow: 2px 2px 5px #000000;
+    font-size: 30px;
+    color: white;
+    margin-left: 200px;
+    position: relative;
+    width: 75%;
+    bottom: 210px;
+}
+
+#caption2 {
+    position: relative;
+    color: white;
+    font-weight: bold;
+    bottom: 160px;
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    text-shadow: 2px 2px 5px #000;
+}
+
+.start-button {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    background: #15713b;
+    width: 160px;
+    position: relative;
+    bottom: 550px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #efe411;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+}
+.start-button:hover, .btn:focus, .btn:active {
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.button {
+    text-align: center;
+    position: relative;
+    margin-left: 665px;
+    margin-right: 100px;
+    bottom: 0px;
+}
+
+@media screen and (min-width: 561px)
+{
+    body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: absolute;
+        background-repeat: no-repeat;
+        min-height: 120vh;
+        background-image: url('background.jpg');
+        backdrop-filter: blur(2px);
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+    }
+}

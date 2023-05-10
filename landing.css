@@ -1,0 +1,306 @@
+.container
+{
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+body 
+{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    position: relative;
+    min-height: 120vh;
+    background-image: url('background.jpg');
+    
+    /* Add this to zoom out of the background image */
+    background-size: cover;
+}
+
+.blur-overlay {
+    position: fixed; /* Positions the overlay relative to the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(0.2rem); /* Adjust the blur radius as needed */
+    z-index: -1;
+}
+
+
+h1
+{   
+    margin-left: 20%;
+    font-size: 2.7rem;
+    text-shadow: 2px 2px 5px #000000;
+    color: white;
+    -webkit-text-stroke: 1px #000000;
+    text-stroke: 1px #000000;
+}
+
+h3
+{
+    margin-left: 30%;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 5px #000000;
+    color: white;
+    -webkit-text-stroke: 1px #000000;
+    text-stroke: 1px #000000;
+}
+
+#logo
+{
+    position: absolute;
+    top: 13%;
+    width: 100%;
+    height: auto;
+    right: 30%;
+    transform: scale(0.30);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+  
+#coe
+{
+    position: absolute;
+    top: 11%;
+    width: 100%;
+    height: auto;
+    left: 30%;
+    transform: scale(0.28);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+#eco
+{
+    position: absolute;
+    top: 28%;
+    width: 100%;
+    height: auto;
+    right: 30%;
+    transform: scale(0.28);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+#ai4
+{
+    position: absolute;
+    top: 22%;
+    width: 100%;
+    height: auto;
+    left: 30%;
+    transform: scale(0.25);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 8px 16px rgba(0, 0, 0, 0.4); 
+}
+
+
+
+#caption1
+{
+    text-align: center;
+    text-shadow: 2px 2px 5px #000000;
+    font-size: 1.5rem;
+
+    color: white;
+
+    right: 13%;
+    position: absolute;
+    width: 75%;
+    bottom: 33%;
+}
+
+#caption1-1
+{
+    text-align: center;
+    text-shadow: 2px 2px 5px #000000;
+    font-size: 1.5rem;
+
+    color: white;
+
+    right: 13%;
+    position: absolute;
+    width: 75%;
+    bottom: 28%;
+}
+
+#caption1-2
+{
+    text-align: center;
+    text-shadow: 2px 2px 5px #000000;
+    font-size: 1.5rem;
+
+    color: white;
+
+    right: 13%;
+    position: absolute;
+    width: 75%;
+    bottom: 24%; 
+}
+
+#caption2
+{   
+    text-align: center;
+    text-shadow: 2px 2px 5px #000000;
+    font-size: 1.5rem;
+
+    color: white;
+
+    right: 13%;
+    position: absolute;
+    width: 75%;
+    bottom: 20%;
+}
+
+
+.start-button
+{
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    transform: scale(1.0);
+    background: #15713b;
+    width: 100px;
+    position: absolute;
+    bottom: 60%;
+    right: 46%;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #efe411;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+}
+.start-button:hover, .btn:focus, .btn:active{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+@media only screen and (min-width: 1014px) and (min-height: 958px)
+{
+
+
+    h1
+    {
+        font-size: 2.7rem;
+        margin-left: 5%;
+    }
+
+    h3
+    {
+        font-size: 2rem;
+        margin-left: 15%;
+    }
+
+    #logo
+    {
+        transform: scale(0.4);
+
+    }
+
+    #eco
+    {
+        transform: scale(0.4);
+        top: 38%;
+    }
+
+    #coe
+    {
+        transform: scale(0.37);
+        top: 11.57%;
+        left: 29    %;
+    }
+
+    #ai4
+    {
+        transform: scale(0.35); 
+        left: 30%;
+        top: 34.5%;
+    }
+
+    #caption1
+    {
+        width: 100%;
+        left: 0%;    
+    }
+
+    #caption1-1
+    {
+        display: inline;
+        width: 100%;
+        left: 0%;
+        bottom: 30%;
+    }
+
+    #caption1-2
+    {
+        width: 100%;
+        left: 0%;
+        bottom: 27%;
+    }
+
+    #caption2
+    {
+        width: 100%;
+        left: 0%;
+    }   
+
+    .start-button
+    {
+        transform: scale(1.2);
+        bottom: 60%;
+        right: 43%;
+    }
+
+}
+
+
+@media only screen and (min-width: 1920px) and (min-height: 937px)
+{
+    h1
+    {
+        margin-left: 20%;
+        font-size: 3.5rem;
+        text-shadow: 2px 2px 5px #000000;
+        color: white;
+        -webkit-text-stroke: 1px #000000;
+        text-stroke: 1px #000000;
+    }
+
+    h3
+    {
+        margin-left: 30%;
+        font-size: 2.5rem;
+        text-shadow: 2px 2px 5px #000000;
+        color: white;
+        -webkit-text-stroke: 1px #000000;
+        text-stroke: 1px #000000;
+    }
+
+    .start-button
+    {
+        transform: scale(1.4);
+    }
+
+    
+    #caption1
+    {
+        font-size: 2rem;
+    }
+
+    #caption2
+    {
+        font-size: 1.8rem;
+    }
+}
+
+
+
+

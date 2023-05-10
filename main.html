@@ -1,0 +1,122 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title>Wildland-Urban Fire Interface</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div id="popup">
+      <div id="popup-content">
+        <h1>Instructions</h1>
+        <p>For this demo, click on and highlight the Kinsmen Sports Centre, select a map type and a date (not all images require a date), then click the "Update" button to display the map image.</p>
+        <span id="close">&times;</span>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="map-container">
+        <div id="map"></div>
+      </div>
+      <div class="controls-container">
+        <div id="controls">
+          <label for="datepicker" id="datepicker-label">Date:</label>
+          <select type="text" id="datepicker" disabled>
+          <option value="">-Select-</option>
+          <option value="2022-08-16">2022-08-16</option>
+          <option value="2022-11-01">2022-11-01</option>
+        </select>
+          <label for="map-dropdown" id="map-dropdown-label">Map Type:</label>
+          <select id="map-dropdown" disabled>
+            <option value="-1">-Select-</option>
+            <option value="fuel-map-topography">Fuel Map and Topography</option>
+            <option value="fire-behavior">Fire Behavior</option>
+          </select>
+          <div id="fuel-map-topography" style="display:none">
+            <label for="date-dropdown" id = "fmt-label">Fuel Map and Topography:</label>
+            <select id="fmt">
+              <option value="-1">-Select-</option>
+              <option value="satellite-map">Satellite Map</option>
+              <option value="grass-zone1">Grass Zone 1</option>
+              <option value="grass-zone2">Grass Zone 2</option>
+              <option value="grass-zone3">Grass Zone 3</option>
+              <option value="deciduous-zone1">Deciduous Zone 1</option>
+              <option value="deciduous-zone2">Deciduous Zone 2</option>
+              <option value="deciduous-zone3">Deciduous Zone 3</option>
+              <option value="conifer-zone1">Conifer Zone 1</option>
+              <option value="conifer-zone2">Conifer Zone 2</option>
+              <option value="conifer-zone3">Conifer Zone 3</option>
+              <option value="fuel-map-overlay">Fuel Map Overlay</option>
+              <option value="fpb-map">FPB Map</option>
+              <option value="spread-factor">Spread Factor</option>
+            </select>
+          </div>
+          <div id="fire-behavior" style="display:none">
+            <label for="date-dropdown"id = "fb-label">Fire Behavior:</label>
+            <select id="fb">
+              <option value="-1">-Select-</option>
+              <option value="rate-of-spread">Rate of Spread</option>
+              <option value="intensity-factor1">Intensity Factor 1</option>
+              <option value="intensity-factor2">Intensity Factor 2</option>
+              <option value="intensity-factor3">Intensity Factor 3</option>
+            </select>
+          </div>
+          <button id="update-button" disabled>Update</button>
+          <button id="help-button" onclick="showInstructions()">?</button>
+          <button id = "download-button" onclick="downloadImage()" disabled>Download Image</button>
+          <div id="instructions-container">
+            <h2>Instructions</h2>
+            <p>For this demo, click on and highlight the Kinsmen Sports Centre, select a map type and a date (not all images require a date), then click the "Update" button to display the map image.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-geoman-free@2.10.1/dist/leaflet-geoman.min.js"></script>
+    <script src="https://unpkg.com/osmtogeojson@3.2.0/osmtogeojson.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+      // Get the map type dropdown and date dropdown container elements
+      var mapDropdown = document.getElementById("map-dropdown");
+      var dateDropdownContainer = document.getElementById("fuel-map-topography");
+      var mapDropdown1 = document.getElementById("map-dropdown");
+      var dateDropdownContainer1 = document.getElementById("fire-behavior");
+
+      // Add an event listener to the map type dropdown
+      mapDropdown.addEventListener("change", function() {
+        // Get the selected value of the map type dropdown
+        var selectedValue = mapDropdown.value;
+
+        // Show or hide the date dropdown container based on the selected value
+        if (selectedValue === "fuel-map-topography") {
+          dateDropdownContainer.style.display = "block";
+        } else {
+          dateDropdownContainer.style.display = "none";
+        }
+      });
+
+      // Add an event listener to the second map type dropdown
+      mapDropdown1.addEventListener("change", function() {
+        // Get the selected value of the map type dropdown
+        var selectedValue1 = mapDropdown1.value;
+
+        // Show or hide the date dropdown container based on the selected value
+        if (selectedValue1 === "fire-behavior") {
+          dateDropdownContainer1.style.display = "block";
+        } else {
+          dateDropdownContainer1.style.display = "none";
+        }
+      });
+
+    </script>
+
+
+  </body>
+  </html>
