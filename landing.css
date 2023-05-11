@@ -292,12 +292,22 @@ h3
     
     #caption1
     {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+
+    #caption1-1
+    {
+        font-size: 1.8rem;
+    }
+
+    #caption1-2
+    {
+        font-size: 1.8rem;
     }
 
     #caption2
     {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
 }
 
