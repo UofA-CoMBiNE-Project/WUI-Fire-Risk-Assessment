@@ -329,23 +329,25 @@ h3
     #logo
     {
         transform: scale(0.35);
+        top: 10%;
     }
 
     #coe
     {
         transform: scale(0.32);
+        top: 8%;
     }
 
     #eco
     {
         transform: scale(0.35);
-        top: 35%;
+        top: 32%;
     }
 
     #ai4
     {
         transform: scale(0.27);
-        top: 30%;
+        top: 27%;
     }
 
     .start-button
