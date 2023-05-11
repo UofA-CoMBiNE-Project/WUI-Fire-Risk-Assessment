@@ -363,6 +363,7 @@ body {
   font-family: 'Trebuchet MS';
   font-size: 2.5rem;
   text-decoration: underline;
+  bottom: 50%;
   font-weight: bold;
   color: #000000;
   text-align: center;
@@ -629,6 +630,23 @@ body {
   {
     transform: scale(0.54);
     bottom: 19rem;
-    left: 42.5%;
+    left: 45%;
+  }
+
+  #popup h1
+  {
+    font-size: 5rem;
+  }
+
+  #popup p
+  {
+    font-size: 3.1rem;
+    top: 27%;
+    right: 1%;
+  } 
+
+  #close
+  {
+    font-size: 3.2rem;
   }
 }
