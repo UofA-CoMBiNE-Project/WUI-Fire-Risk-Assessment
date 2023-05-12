@@ -203,7 +203,7 @@ const imageMap = {
         case "fuel-map-overlay":
           return ["4) FuelMapOverlay.jpg",'' ];
         case "fpb-map":
-          return ["5.10) FPBmap.jpg",'' ];
+          return ["6.1) FPB Overlay.jpg",'6.0) FPB Colorbar.jpg' ];
         case "spread-factor":
           return ["5.11) SpreadFactor.jpg",'' ];
         default:
@@ -220,9 +220,9 @@ const imageMap = {
       switch (fbValue) {
         case "rate-of-spread":
           if (date === "2022-08-16") {
-            return ["8.1) Rate of Spread Index (August).jpg", "8.2) Rate of Spread Index Colourbar (August).jpg"];
+            return ["8.1) Rate of Spread Index (August).jpg", "8.0) RSI Colourbar (August).jpg"];
           } else if (date === "2022-11-01") {
-            return ["8.3) Rate of Spread Index (November).jpg", "8.4) Rate of Spread Index Colourbar (November).jpg"];
+            return ["8.3) Rate of Spread Index (November).jpg", "8.2) RSI Colourbar (November).jpg"];
           } else {
             return null;
           }
@@ -230,23 +230,23 @@ const imageMap = {
           if (date === "2022-08-16") {
             return ["9.1) Intensity Factor for Zone 1 (August).jpg", "9.0) Intensity Factor for Zone 1 Colourbar (August).jpg"];
           } else if (date === "2022-11-01") {
-            return ["9.7) Intensity Factor for Zone 1 (November).jpg", "9.10) Intensity Factor for Zone 1 Colourbar (November).jpg"];
+            return ["9.7) Intensity Factor for Zone 1 (November).jpg", "9.6) Intensity Factor for Zone 1 Colourbar (November).jpg"];
           } else {
             return null;
           }
         case "intensity-factor2":
           if (date === "2022-08-16") {
-            return ["9.3) Intensity Factor for Zone 2 (August).jpg", "9.4) Intensity Factor for Zone 2 Colourbar (August).jpg"];
+            return ["9.3) Intensity Factor for Zone 2 (August).jpg", "9.2) Intensity Factor for Zone 2 Colourbar (August).jpg"];
           } else if (date === "2022-11-01") {
-            return ["9.8) Intensity Factor for Zone 2 Colourbar (November).jpg", "9.9) Intensity Factor for Zone 2 Colourbar (November).jpg"];
+            return ["9.8) Intensity Factor for Zone 2 Colourbar (November).jpg", "9.7) Intensity Factor for Zone 2 Colourbar (November).jpg"];
           } else {
             return null;
           }
         case "intensity-factor3":
           if (date === "2022-08-16") {
-            return ["9.5) Intensity Factor for Zone 3 (August).jpg", "9.6) Intensity Factor for Zone 3 Colourbar (August).jpg"];
+            return ["9.5) Intensity Factor for Zone 3 (August).jpg", "9.4) Intensity Factor for Zone 3 Colourbar (August).jpg"];
           } else if (date === "2022-11-01") {
-            return ["9.11) Intensity Factor for Zone 3 (November).jpg", "9.12) Intensity Factor for Zone 3 Colourbar (November).jpg"];
+            return ["9.11) Intensity Factor for Zone 3 (November).jpg", "9.10) Intensity Factor for Zone 3 Colourbar (November).jpg"];
           } else {
             return null;
           }
