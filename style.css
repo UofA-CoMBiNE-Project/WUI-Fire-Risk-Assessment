@@ -495,11 +495,18 @@ body {
     top: 7%;
   }
 
-  #map-image
+  #map-image-1
   {
-    transform: scale(0.35);
+    transform: scale(0.31);
     bottom: 23rem;
-    left: 21.5rem;
+    left: 19.5rem;
+  }
+
+  #map-image-2
+  {
+    transform: scale(0.5);
+    bottom: 35rem;
+    left: 57.7rem;
   }
 
   #popup h1
@@ -549,10 +556,16 @@ body {
     top: 5rem;
   }
 
-  #map-image
+  #map-image-1
   {
-    top: 6rem;
+    top: 0rem;
     right: 0rem;
+  }
+
+  #map-image-2
+  {
+    transform: scale(0.95);
+    right: 0.9  rem;
   }
 
   #popup p

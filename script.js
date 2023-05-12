@@ -238,7 +238,7 @@ const imageMap = {
           if (date === "2022-08-16") {
             return ["9.3) Intensity Factor for Zone 2 (August).jpg", "9.2) Intensity Factor for Zone 2 Colourbar (August).jpg"];
           } else if (date === "2022-11-01") {
-            return ["9.8) Intensity Factor for Zone 2 Colourbar (November).jpg", "9.7) Intensity Factor for Zone 2 Colourbar (November).jpg"];
+            return ["9.9) Intensity Factor for Zone 2 (November).jpg", "9.8) Intensity Factor for Zone 2 Colourbar (November).jpg"];
           } else {
             return null;
           }
