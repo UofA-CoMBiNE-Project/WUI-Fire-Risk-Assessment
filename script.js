@@ -220,33 +220,33 @@ const imageMap = {
       switch (fbValue) {
         case "rate-of-spread":
           if (date === "2022-08-16") {
-            return "5.12) RateSpread-Aug16.jpg";
+            return "8.1) Rate of Spread Index (August).jpg";
           } else if (date === "2022-11-01") {
-            return "5.13) RateSpread-Nov1.jpg";
+            return "8.3) Rate of Spread Index (November).jpg";
           } else {
             return null;
           }
         case "intensity-factor1":
           if (date === "2022-08-16") {
-            return "5.14) IntensityFactor1-Aug16.jpg";
+            return "9.1) Intensity Factor for Zone 1 (August).jpg";
           } else if (date === "2022-11-01") {
-            return "5.17) IntensityFactor1-Nov1.jpg";
+            return "9.7) Intensity Factor for Zone 1 (November).jpg";
           } else {
             return null;
           }
         case "intensity-factor2":
           if (date === "2022-08-16") {
-            return "5.15) IntensityFactor2-Aug16.jpg";
+            return "9.3) Intensity Factor for Zone 2 (August).jpg";
           } else if (date === "2022-11-01") {
-            return "5.18) IntensityFactor2-Nov1.jpg";
+            return "9.8) Intensity Factor for Zone 2 Colourbar (November).jpg";
           } else {
             return null;
           }
         case "intensity-factor3":
           if (date === "2022-08-16") {
-            return "5.16) IntensityFactor3-Aug16.jpg";
+            return "9.5) Intensity Factor for Zone 3 (August).jpg";
           } else if (date === "2022-11-01") {
-            return "5.19) IntensityFactor3-Nov1.jpg";
+            return "9.11) Intensity Factor for Zone 3 (November).jpg";
           } else {
             return null;
           }
