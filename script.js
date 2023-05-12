@@ -181,7 +181,7 @@ const imageMap = {
     if (check) {
       switch (fmtValue) {
         case "satellite-map":
-          return ["1) SatelliteMap.jpg",'' ];
+          return ["1) SatelliteMap.jpg",''];
         case "grass-zone1":
           return ["5.1) GrassZone1.jpg",'' ];
         case "grass-zone2":
@@ -297,13 +297,15 @@ updateButton.addEventListener("click", function() {
       const image = imageContainer1.querySelector("img");
       image.src = imageUrl1;
     }
-    
-    if (!imageContainer2) {
-      imageContainer2 = createImageContainer(imageUrl2, 2);
-      document.getElementById("controls").appendChild(imageContainer2);
-    } else {
-      const image = imageContainer2.querySelector("img");
-      image.src = imageUrl2;
+    if (imageNames[1].length > 0)
+    {
+      if (!imageContainer2) {
+        imageContainer2 = createImageContainer(imageUrl2, 2);
+        document.getElementById("controls").appendChild(imageContainer2);
+      } else {
+        const image = imageContainer2.querySelector("img");
+        image.src = imageUrl2;
+      }
     }
   } else {
     document.getElementById("map-image-container-1")?.remove();
