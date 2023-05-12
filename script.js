@@ -181,31 +181,31 @@ const imageMap = {
     if (check) {
       switch (fmtValue) {
         case "satellite-map":
-          return "1) SatelliteMap.jpg";
+          return ["1) SatelliteMap.jpg",'' ];
         case "grass-zone1":
-          return "5.1) GrassZone1.jpg";
+          return ["5.1) GrassZone1.jpg",'' ];
         case "grass-zone2":
-          return "5.4) GrassZone2.jpg";
+          return ["5.4) GrassZone2.jpg",'' ];
         case "grass-zone3":
-          return "5.7) GrassZone3.jpg";
+          return ["5.7) GrassZone3.jpg",'' ];
         case "deciduous-zone1":
-          return "5.2) DeciduousZone1.jpg";
+          return ["5.2) DeciduousZone1.jpg",'' ];
         case "deciduous-zone2":
-          return "5.5) DeciduousZone2.jpg";
+          return ["5.5) DeciduousZone2.jpg",'' ];
         case "deciduous-zone3":
-          return "5.8) DeciduousZone3.jpg";
+          return ["5.8) DeciduousZone3.jpg",'' ];
         case "conifer-zone1":
-          return "5.3) ConiferZone1.jpg";
+          return ["5.3) ConiferZone1.jpg",'' ];
         case "conifer-zone2":
-          return "5.6) ConiferZone2.jpg";
+          return ["5.6) ConiferZone2.jpg",'' ];
         case "conifer-zone3":
-          return "5.9) ConiferZone3.jpg";
+          return ["5.9) ConiferZone3.jpg",'' ];
         case "fuel-map-overlay":
-          return "4) FuelMapOverlay.jpg";
+          return ["4) FuelMapOverlay.jpg",'' ];
         case "fpb-map":
-          return "5.10) FPBmap.jpg";
+          return ["5.10) FPBmap.jpg",'' ];
         case "spread-factor":
-          return "5.11) SpreadFactor.jpg";
+          return ["5.11) SpreadFactor.jpg",'' ];
         default:
           return null;
       }
@@ -220,33 +220,33 @@ const imageMap = {
       switch (fbValue) {
         case "rate-of-spread":
           if (date === "2022-08-16") {
-            return "8.1) Rate of Spread Index (August).jpg";
+            return ["8.1) Rate of Spread Index (August).jpg", "8.2) Rate of Spread Index Colourbar (August).jpg"];
           } else if (date === "2022-11-01") {
-            return "8.3) Rate of Spread Index (November).jpg";
+            return ["8.3) Rate of Spread Index (November).jpg", "8.4) Rate of Spread Index Colourbar (November).jpg"];
           } else {
             return null;
           }
         case "intensity-factor1":
           if (date === "2022-08-16") {
-            return "9.1) Intensity Factor for Zone 1 (August).jpg";
+            return ["9.1) Intensity Factor for Zone 1 (August).jpg", "9.2) Intensity Factor for Zone 1 Colourbar (August).jpg"];
           } else if (date === "2022-11-01") {
-            return "9.7) Intensity Factor for Zone 1 (November).jpg";
+            return ["9.7) Intensity Factor for Zone 1 (November).jpg", "9.10) Intensity Factor for Zone 1 Colourbar (November).jpg"];
           } else {
             return null;
           }
         case "intensity-factor2":
           if (date === "2022-08-16") {
-            return "9.3) Intensity Factor for Zone 2 (August).jpg";
+            return ["9.3) Intensity Factor for Zone 2 (August).jpg", "9.4) Intensity Factor for Zone 2 Colourbar (August).jpg"];
           } else if (date === "2022-11-01") {
-            return "9.8) Intensity Factor for Zone 2 Colourbar (November).jpg";
+            return ["9.8) Intensity Factor for Zone 2 Colourbar (November).jpg", "9.9) Intensity Factor for Zone 2 Colourbar (November).jpg"];
           } else {
             return null;
           }
         case "intensity-factor3":
           if (date === "2022-08-16") {
-            return "9.5) Intensity Factor for Zone 3 (August).jpg";
+            return ["9.5) Intensity Factor for Zone 3 (August).jpg", "9.6) Intensity Factor for Zone 3 Colourbar (August).jpg"];
           } else if (date === "2022-11-01") {
-            return "9.11) Intensity Factor for Zone 3 (November).jpg";
+            return ["9.11) Intensity Factor for Zone 3 (November).jpg", "9.12) Intensity Factor for Zone 3 Colourbar (November).jpg"];
           } else {
             return null;
           }
@@ -256,6 +256,7 @@ const imageMap = {
     }
   }
 };
+
 
 const updateButton = document.getElementById("update-button");
 let imageContainer = null;
@@ -273,33 +274,38 @@ updateButton.addEventListener("click", function() {
   const dateInput = document.getElementById("datepicker");
   const date = dateInput.value;
   
-  let imageName;
+  let imageNames;
   if (mapType === "fuel-map-topography") {
-    const getImageFilename = imageMap[mapType];
-    imageName = getImageFilename(date, fmtValue);
+    const getImageFilenames = imageMap[mapType];
+    imageNames = getImageFilenames(date, fmtValue);
   } else if (mapType === "fire-behavior") {
-    const getImageFilename = imageMap[mapType];
-    imageName = getImageFilename(date, fbValue);
+    const getImageFilenames = imageMap[mapType];
+    imageNames = getImageFilenames(date, fbValue);
   }
   
-  if (imageName) {
-    const imageUrl = imageName + "?" + Date.parse(date);
-    if (!imageContainer) {
-      imageContainer = document.createElement("div");
-      imageContainer.id = "map-image-container";
-      const image = document.createElement("img");
-      image.src = imageUrl;
-      image.id = "map-image";
-      imageContainer.appendChild(image);
-      document.getElementById("controls").appendChild(imageContainer);
-    } else {
-      const image = imageContainer.querySelector("img");
-      image.src = imageUrl;
-    }
-  } else if (imageContainer) {
-    imageContainer.remove();
-    imageContainer = null;
+  if (imageNames && Array.isArray(imageNames)) {
+    imageNames.forEach((imageName, index) => {
+      const imageUrl = imageName + "?" + Date.parse(date);
+      let imageContainer = document.getElementById(`map-image-container-${index}`);
+      
+      if (!imageContainer) {
+        imageContainer = document.createElement("div");
+        imageContainer.id = `map-image-container-${index}`;
+        const image = document.createElement("img");
+        image.src = imageUrl;
+        image.id = `map-image-${index}`;
+        imageContainer.appendChild(image);
+        document.getElementById("controls").appendChild(imageContainer);
+      } else {
+        const image = imageContainer.querySelector("img");
+        image.src = imageUrl;
+      }
+    });
+  } else {
+    const imageContainers = document.querySelectorAll('[id^="map-image-container-"]');
+    imageContainers.forEach(imageContainer => imageContainer.remove());
   }
+
   fetchBuildings();
 });
 

@@ -626,12 +626,20 @@ body {
     top: 7%;
   }
   
-  #map-image
-  {
+  #map-image-0 {
+    position: relative;
     transform: scale(0.54);
     bottom: 19rem;
     left: 45%;
   }
+  
+  #map-image-1 {
+    position: relative;
+    transform: scale(0.1);
+    bottom: 19rem;
+    left: 45%;
+  }
+  
 
   #popup h1
   {
