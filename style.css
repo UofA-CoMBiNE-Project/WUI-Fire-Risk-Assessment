@@ -42,18 +42,33 @@ html, body {
   overflow: hidden;
 }
 
-#map-image {
+#map-image-2 {
   max-width: 100%;
-  transform: scale(0.65);
+  transform: scale(0.8);
   max-height: 100%;
   position: fixed;
-  left: 56.5%;
+  left: 92.7%;
+  top: 25%; /* adjust this value as needed */
+  border: 4px solid black;
+  display: block;
+  margin: auto;
+  z-index: 9;
+}
+
+#map-image-1 {
+  max-width: 100%;
+  transform: scale(0.60);
+  max-height: 100%;
+  position: fixed;
+  left: 54%;
   top: 5%; /* adjust this value as needed */
   border: 4px solid black;
   display: block;
   margin: auto;
   z-index: 9;
 }
+
+
 
 
 .controls-container {
@@ -635,7 +650,7 @@ body {
   
   #map-image-1 {
     position: relative;
-    transform: scale(0.1);
+    transform: scale(0.54);
     bottom: 19rem;
     left: 45%;
   }

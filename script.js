@@ -228,7 +228,7 @@ const imageMap = {
           }
         case "intensity-factor1":
           if (date === "2022-08-16") {
-            return ["9.1) Intensity Factor for Zone 1 (August).jpg", "9.2) Intensity Factor for Zone 1 Colourbar (August).jpg"];
+            return ["9.1) Intensity Factor for Zone 1 (August).jpg", "9.0) Intensity Factor for Zone 1 Colourbar (August).jpg"];
           } else if (date === "2022-11-01") {
             return ["9.7) Intensity Factor for Zone 1 (November).jpg", "9.10) Intensity Factor for Zone 1 Colourbar (November).jpg"];
           } else {
@@ -283,31 +283,45 @@ updateButton.addEventListener("click", function() {
     imageNames = getImageFilenames(date, fbValue);
   }
   
-  if (imageNames && Array.isArray(imageNames)) {
-    imageNames.forEach((imageName, index) => {
-      const imageUrl = imageName + "?" + Date.parse(date);
-      let imageContainer = document.getElementById(`map-image-container-${index}`);
-      
-      if (!imageContainer) {
-        imageContainer = document.createElement("div");
-        imageContainer.id = `map-image-container-${index}`;
-        const image = document.createElement("img");
-        image.src = imageUrl;
-        image.id = `map-image-${index}`;
-        imageContainer.appendChild(image);
-        document.getElementById("controls").appendChild(imageContainer);
-      } else {
-        const image = imageContainer.querySelector("img");
-        image.src = imageUrl;
-      }
-    });
+  if (imageNames) {
+    const imageUrl1 = imageNames[0] + "?" + Date.parse(date);
+    const imageUrl2 = imageNames[1] + "?" + Date.parse(date);
+    
+    let imageContainer1 = document.getElementById("map-image-container-1");
+    let imageContainer2 = document.getElementById("map-image-container-2");
+    
+    if (!imageContainer1) {
+      imageContainer1 = createImageContainer(imageUrl1, 1);
+      document.getElementById("controls").appendChild(imageContainer1);
+    } else {
+      const image = imageContainer1.querySelector("img");
+      image.src = imageUrl1;
+    }
+    
+    if (!imageContainer2) {
+      imageContainer2 = createImageContainer(imageUrl2, 2);
+      document.getElementById("controls").appendChild(imageContainer2);
+    } else {
+      const image = imageContainer2.querySelector("img");
+      image.src = imageUrl2;
+    }
   } else {
-    const imageContainers = document.querySelectorAll('[id^="map-image-container-"]');
-    imageContainers.forEach(imageContainer => imageContainer.remove());
+    document.getElementById("map-image-container-1")?.remove();
+    document.getElementById("map-image-container-2")?.remove();
   }
-
+  
   fetchBuildings();
 });
+
+function createImageContainer(imageUrl, index) {
+  const imageContainer = document.createElement("div");
+  imageContainer.id = `map-image-container-${index}`;
+  const image = document.createElement("img");
+  image.src = imageUrl;
+  image.id = `map-image-${index}`;
+  imageContainer.appendChild(image);
+  return imageContainer;
+}
 
 
 
