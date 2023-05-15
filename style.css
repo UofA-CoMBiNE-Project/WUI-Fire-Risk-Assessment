@@ -565,7 +565,7 @@ body {
   #map-image-2
   {
     transform: scale(0.95);
-    right: 0.9  rem;
+    right: 0.9rem;
   }
 
   #popup p
@@ -654,18 +654,16 @@ body {
     top: 7%;
   }
   
-  #map-image-0 {
-    position: relative;
-    transform: scale(0.54);
-    bottom: 19rem;
-    left: 45%;
+  #map-image-2 {
+    transform: scale(1.1);
+    bottom: 38rem;
+    left: 70%;
   }
   
   #map-image-1 {
-    position: relative;
-    transform: scale(0.54);
-    bottom: 19rem;
-    left: 45%;
+    transform: scale(0.5);
+    bottom: 15rem;
+    left: 40%;
   }
   
 
