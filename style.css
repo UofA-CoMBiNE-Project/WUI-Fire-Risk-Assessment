@@ -522,6 +522,55 @@ body {
   }
 }
 
+@media only screen and (min-width: 1667px) and (min-height: 1102px)
+{
+  #popup h1
+  {
+    font-size: 3.5rem;
+  }
+
+  #close
+  {
+    transform: scale(10.5%);
+  }
+
+  #map-dropdown-label
+  {
+    font-size: 1.2rem;  
+    right: 83%;
+  }
+
+  #map-dropdown
+  {
+    transform: scale(1.8);
+    right: 55%;
+  }
+
+  #datepicker-label
+  {
+    font-size: 1.2rem;
+    right: 38%; 
+  }
+
+  #datepicker
+  {
+    transform: scale(1.8);
+    right: 20%;
+  }
+
+  #help-button
+  {
+    transform: scale(1.4);
+  }
+
+  #update-button
+  {
+    transform: scale(1.4);
+    right: 83%;
+    top: 9.3%;  
+  }
+}
+
 
 @media only screen and (min-width: 1920px) and (min-height: 937px)
 {

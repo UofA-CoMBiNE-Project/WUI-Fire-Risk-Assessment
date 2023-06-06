@@ -182,6 +182,8 @@ const imageMap = {
       switch (fmtValue) {
         case "satellite-map":
           return ["1) SatelliteMap.jpg",''];
+        case "zone-map":
+          return ["ZoneMap.png",''];
         case "grass-zone1":
           return ["5.1) GrassZone1.jpg",'' ];
         case "grass-zone2":
