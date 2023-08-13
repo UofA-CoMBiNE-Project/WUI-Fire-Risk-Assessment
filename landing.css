@@ -263,6 +263,7 @@ h3
     }
 }
 
+
 @media only screen and (min-width: 1014px) and (min-height: 958px)
 {
 
@@ -443,8 +444,8 @@ h3
 {
    h1
    {
-    font-size: 4.5rem;
-    margin-left: 10%;
+    font-size: 4rem;
+    margin-left: 15%;
    } 
    h3
    {
@@ -455,23 +456,23 @@ h3
    #logo
    {
     transform: scale(0.35);
-    top: 15%;
+    top: 12%;
    }
    #coe
    {
     transform: scale(0.32);
-    top: 13%;
+    top: 11%;
    }
     #eco
     {
      transform: scale(0.35);
-     top: 38%;
+     top: 30%;
     }
 
     #ai4
     {
      transform: scale(0.27);
-     top: 33%;
+     top: 25%;
     }
 
     .start-button
@@ -480,6 +481,32 @@ h3
      right: 45%;
      bottom: 60%;
     }
+
+    #caption1
+    {
+        font-size: 3rem;
+        top: 55%;
+    }
+
+    #caption1-1
+    {
+        font-size: 3rem;
+        bottom: 27%;
+    }
+
+    #caption1-2
+    {
+        font-size: 3rem;
+        bottom: 22%;
+    }
+
+    #caption2
+    {
+        font-size: 2.5rem;
+        bottom: 18%;
+
+    }
+
 }
 
 
