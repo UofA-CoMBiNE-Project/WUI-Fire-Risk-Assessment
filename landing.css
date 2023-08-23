@@ -440,6 +440,44 @@ h3
     }
 }
 
+@media only screen and (min-width: 1537px) and (min-height: 707px)
+{
+    h1
+    {
+        font-size: 3rem;
+        margin-left: 17%;
+    }
+
+    h3
+    {
+        font-size: 2rem;
+        margin-left: 30%;
+    }
+
+    #eco
+    {
+        transform: scale(0.3);
+        top: 32%;
+    }
+
+    #ai4
+    {
+        transform: scale(0.25);
+    }
+
+    .start-button
+    {
+        transform: scale(1.1);
+        right: 45%;
+        bottom: 55%;
+    }
+
+    #caption1
+    {
+        top: 59%;
+        right: 0%;
+}
+
 @media only screen and (min-width: 1920px) and (min-height: 1080px)
 {
    h1
