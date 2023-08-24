@@ -395,55 +395,76 @@ h3
     h1
     {
         font-size: 3rem;
-        margin-left: 15%;
+        position: fixed;
+        left: 10%;
     }
 
     h3
     {
         font-size: 2rem;
-        margin-left: 27%;
+        position: fixed;
+        top: 10%;
+        left: 7%;
     }
 
-    #eco
+    .start-button
     {
-        transform: scale(0.3);
-        top: 32%;
-    }
-
-    #coe
-    {
-        transform: scale(0.28);
-        top: 11.57%;
-        left: 29    %;
-    }
-
-    #logo
-    {
-        transform: scale(0.3);
+        transform: scale(1.5);
+        top: 30%;
+        left: 47%;
     }
 
     #ai4
     {
         transform: scale(0.25);
+        position: fixed;
+        top: 24%;
     }
 
-    .start-button
+    #logo
     {
-        transform: scale(1.1);
-        right: 45%;
-        bottom: 55%;
+        transform: scale(0.3);
+        top: 10%;
+    }
+
+    #eco
+    {
+        transform: scale(0.32);
+        position: fixed;
+        top: 20%;
+    }
+
+    #coe
+    {
+        transform: scale(0.25);
+        top: 10%;
     }
 
     #caption1
     {
-        top: 59%;
-        right: 0%;
+        font-size: 1rem;
+        top: 50%;
     }
 
     #caption1-1
     {
-        top: 67%;
+        font-size: 1rem;
+        bottom: 27%;
     }
+
+    #caption1-2
+    {
+        font-size: 1rem;
+        bottom: 22%;
+    }
+
+    #caption2
+    {
+        font-size: 1rem;
+        bottom: 18%;
+
+    }
+
 }
 
 @media only screen and (min-width: 1536px) and (min-height: 707px)
@@ -734,8 +755,8 @@ h3
     {
         top: 59%;
         right: 0%;
+    }
 }
-
 
 
 @media only screen and (min-width: 1920px) and (min-height: 1080px)
