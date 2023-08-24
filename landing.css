@@ -162,7 +162,7 @@ h3
     background: #15713b;
     width: 100px;
     position: absolute;
-    bottom: 60%;
+    bottom: 66%;
     right: 46%;
     padding: 20px;
     text-align: center;
@@ -883,6 +883,75 @@ h3
     {
         font-size: 2.5rem;
         bottom: 29%;
+    }
+
+    #caption1-2
+    {
+        font-size: 2.5rem;
+        bottom: 25%;
+    }  
+    
+    #caption2
+    {
+        font-size: 2.5rem;
+    }
+}
+
+@media only screen and (min-width: 2560px) and (min-height: 1378px)
+{
+    h1
+    {
+        font-size: 5.3rem;
+        margin-left: 5%;
+    }
+
+    h3
+    {
+        font-size: 4rem;
+        margin-left: 18%;
+    }
+
+    #logo
+    {
+        transform: scale(0.35);
+        top: 10%;
+    }
+
+    #coe
+    {
+        transform: scale(0.32);
+        top: 8%;
+    }
+
+    #eco
+    {
+        transform: scale(0.35);
+        top: 32%;
+    }
+
+    #ai4
+    {
+        transform: scale(0.27);
+        top: 27%;
+    }
+
+    .start-button
+    {
+        transform: scale(2);  
+        right: 50%;
+        bottom: 66%;
+    }
+
+    #caption1
+    {
+        font-size: 2.5rem;  
+    }
+
+    #caption1-1
+    {
+        font-size: 2.5rem;
+        position: fixed;
+        top: 71%;
     }
 
     #caption1-2
